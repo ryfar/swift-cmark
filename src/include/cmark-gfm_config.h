@@ -8,10 +8,6 @@
 #include "config.h"
 #else
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #if __STDC_VERSION__ >= 199901l
   #include <stdbool.h>
 #elif !defined(__cplusplus)
@@ -47,6 +43,10 @@ extern "C" {
 
 #include <stdio.h>
 #include <stdarg.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #define snprintf c99_snprintf
 #define vsnprintf c99_vsnprintf
